@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/Main/Screens/SignIn.dart';
+import 'package:movie_app/Main/Screens/SignUp.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Simple Calculator",
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: signin(),
+      home: signup(),
     );
   }
 }
