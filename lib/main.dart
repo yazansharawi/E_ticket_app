@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/Main/Screens/HomePage.dart';
 import 'package:movie_app/Main/Screens/SignIn.dart';
 import 'package:movie_app/Main/Screens/SignUp.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: signup(),
+      home: homepage(),
     );
   }
 }

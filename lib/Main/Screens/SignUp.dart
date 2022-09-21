@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/Main/Screens/HomePage.dart';
 import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignIn.dart';
@@ -169,7 +170,10 @@ class _signupState extends State<signup> {
                         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                       ),
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => homepage()),
+                        );
                       },
                       child: Text('Sign in'),
                     ),
