@@ -1,54 +1,29 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:movie_app/Main/Screens/HomePage.dart';
 import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignUp.dart';
 
+import 'SettingsPage.dart';
+
 class fav extends StatefulWidget {
   @override
   _favState createState() => _favState();
 }
 
-List<String> list = <String>['Sort', 'Name', 'Ratings', 'Date release'];
+
 
 class _favState extends State<fav> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Favorites',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Calendar',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Settings',
-      style: optionStyle,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
+  List<String> list = <String>['Sort', 'Name', 'Ratings', 'Date release'];
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Center(
               child: Text(
             "Favorites",
@@ -382,11 +357,18 @@ class _favState extends State<fav> {
                   context,
                   MaterialPageRoute(builder: (context) => signup()),
                 );
+              if (value == 3)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => settings()),
+                );
             }),
       ),
     );
   }
 }
+
+
 
 class DropdownButtonExample extends StatefulWidget {
   const DropdownButtonExample({key});
@@ -445,3 +427,4 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
     );
   }
 }
+

@@ -7,6 +7,7 @@ import 'package:movie_app/Main/Screens/SignUp.dart';
 
 import 'FavoritesPage.dart';
 import 'MoviesInfo.dart';
+import 'SettingsPage.dart';
 
 class homepage extends StatefulWidget {
   @override
@@ -535,6 +536,11 @@ class _homepageState extends State<homepage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => signup()),
+                );
+              if (value == 3)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => settings()),
                 );
             }),
       ),

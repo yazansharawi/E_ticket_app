@@ -18,9 +18,12 @@ class _movinfoState extends State<movinfo> {
       child:Scaffold(
         appBar: AppBar(
           title: Center(
-              child: Text(
-                "Movie details",
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 35, 0),
+                child: Text(
+                  "Movie details",
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
               )),
           backgroundColor: Color.fromRGBO(116, 157, 181, 1.0),
         ),
@@ -37,7 +40,7 @@ class _movinfoState extends State<movinfo> {
                       padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Container(
                         height: 250,
-                        width: 150,
+                        width: 170,
                         color: Colors.green,
                       ),
                     ),
@@ -50,8 +53,9 @@ class _movinfoState extends State<movinfo> {
                       color: Colors.blue,
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 150, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(10, 200, 5, 0),
                       child: Container(
+                        width: 70,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             color: Color.fromRGBO(116, 157, 181, 1.0),
@@ -93,6 +97,9 @@ class _movinfoState extends State<movinfo> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: Container(
@@ -118,7 +125,7 @@ class _movinfoState extends State<movinfo> {
                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                   child: Row(
                     children: [
-                      Text("About the Movie",
+                      Text("Reviews",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold)),
                     ],
@@ -129,34 +136,58 @@ class _movinfoState extends State<movinfo> {
                 height: 10,
               ),
               Container(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Color.fromRGBO(116, 157, 181, 1.0),
-                        ),
-                        height: 150,
-                        width: 150,
-                        child: Text("ho"),
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                height: 180.0,
+                child: ListView(
+                  // This next line does the trick.
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.red,
                       ),
+                      width: 160.0,
                     ),
                     SizedBox(
-                      height: 20,
+                      width: 15,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Color.fromRGBO(116, 157, 181, 1.0),
-                        ),
-                        height: 150,
-                        width: 150,
-                        child: Text("ho"),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.blue,
                       ),
+                      width: 160.0,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.green,
+                      ),
+                      width: 160.0,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.yellow,
+                      ),
+                      width: 160.0,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.orange,
+                      ),
+                      width: 160.0,
                     ),
                   ],
                 ),
