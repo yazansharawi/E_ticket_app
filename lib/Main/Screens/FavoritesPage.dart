@@ -71,8 +71,9 @@ class _favState extends State<fav> {
               ),
               Container(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(280, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(265, 0, 0, 0),
                   child: Row(
+                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       DropdownButtonExample(),
                     ],
@@ -338,13 +339,11 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
           Icons.arrow_downward,
           color: Colors.white,
         ),
-        elevation: 0,
         style: TextStyle(color: Colors.white),
         underline: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
           ),
-          height: 2,
         ),
         onChanged: (String? value) {
           // This is called when the user selects an item.

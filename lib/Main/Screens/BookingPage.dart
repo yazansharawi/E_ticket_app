@@ -216,14 +216,95 @@ class _BookState extends State<Book> {
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-              child: Container(
-                width: 300,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color:  Color.fromRGBO(116, 157, 181, 1.0),
+              child: GestureDetector(
+                onTap: (){
+                  Container(
+                    height: 200,
+                    width: 150,
+                    child: AlertDialog(
+                      title:
+                      Center(child: const Text('Booking confirmation')),
+                      content: Container(
+                        height: 150,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text("Movie Name:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("Yazan Sharawi"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Seat number:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("4C"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Date:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("17/07/2028"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+
+                          ],
+                        ),
+                      ),
+                      actions: <
+                          Widget>[
+                        Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.white,
+                            ),
+                            child: TextButton(
+                              onPressed: () => Navigator.pop(context, 'Confirm'),
+                              child:
+                              Center(child: const Text('Confirm')),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => homepage()),
+                    );
+                  },
+                  child: Container(
+                    width: 300,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color:  Color.fromRGBO(116, 157, 181, 1.0),
+                    ),
+                    child: Center(child: Text("Book Now")),
+                  ),
                 ),
-                child: Center(child: Text("Book Now")),
               ),
             ),
           ],
@@ -237,21 +318,25 @@ class _BookState extends State<Book> {
                 label: 'Home',
                 backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
+
               BottomNavigationBarItem(
                 icon: Icon(Icons.favorite),
                 label: 'Favorites',
                 backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
+
               BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_today),
                 label: 'Calendar',
                 backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
+
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: 'Settings',
                 backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
+
             ],
             currentIndex: 2,
             selectedItemColor: Colors.black,
@@ -298,6 +383,8 @@ class _Big_seatsState extends State<Big_seats> {
             onTap: (){
               showDialog<String>(context: context, builder: (BuildContextcontext) =>
                   Container(
+                    height: 200,
+                    width: 150,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Color.fromRGBO(116, 157, 181, 1),
@@ -305,46 +392,50 @@ class _Big_seatsState extends State<Big_seats> {
                     child: AlertDialog(
                       title:
                       Center(child: const Text('Booking confirmation')),
-                      content: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Text("Movie Name:"),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Yazan Sharawi"),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Text("Seat number:"),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("4C"),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Text("Date:"),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("17/07/2028"),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
+                      content: Container(
+                        height: 100,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text("Movie Name:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("Yazan Sharawi"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Seat number:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("4C"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Date:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("17/07/2028"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
 
-                        ],
+                          ],
+                        ),
                       ),
                       actions: <
                           Widget>[
@@ -389,23 +480,78 @@ class _Big_seatsState extends State<Big_seats> {
           GestureDetector(
             onTap: (){
               showDialog<String>(context: context, builder: (BuildContextcontext) =>
-                  AlertDialog(
-                    title:
-                    const Text(
-                        'ERROR'),
-                    content: const Text("Hi"),
-                    actions: <
-                        Widget>[
-                      TextButton(
-                        onPressed: () =>
-                            Navigator.pop(
-                                context,
-                                'OK'),
-                        child:
-                        const Text(
-                            'OK'),
+                  Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color.fromRGBO(116, 157, 181, 1),
+                    ),
+                    child: AlertDialog(
+                      title:
+                      Center(child: const Text('Booking confirmation')),
+                      content: Container(
+                        height: 100,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text("Movie Name:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("Yazan Sharawi"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Seat number:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("4C"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Date:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("17/07/2028"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+
+                          ],
+                        ),
                       ),
-                    ],
+                      actions: <
+                          Widget>[
+                        Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.white,
+                            ),
+                            child: TextButton(
+                              onPressed: () => Navigator.pop(context, 'Confirm'),
+                              child:
+                              Center(child: const Text('Confirm')),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
               );
               setState(() {
@@ -461,22 +607,78 @@ class _Small_SeatsState extends State<Small_Seats> {
 
             onTap: (){
               showDialog<String>(context: context, builder: (BuildContextcontext) =>
-                  AlertDialog(
-                    title:
-                    const Text('ERROR'),
-                    content: const Text("Hi"),
-                    actions: <
-                        Widget>[
-                      TextButton(
-                        onPressed: () =>
-                            Navigator.pop(
-                                context,
-                                'OK'),
-                        child:
-                        const Text(
-                            'OK'),
+                  Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color.fromRGBO(116, 157, 181, 1),
+                    ),
+                    child: AlertDialog(
+                      title:
+                      Center(child: const Text('Booking confirmation')),
+                      content: Container(
+                        height: 100,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text("Movie Name:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("Yazan Sharawi"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Seat number:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("4C"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Date:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("17/07/2028"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+
+                          ],
+                        ),
                       ),
-                    ],
+                      actions: <
+                          Widget>[
+                        Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.white,
+                            ),
+                            child: TextButton(
+                              onPressed: () => Navigator.pop(context, 'Confirm'),
+                              child:
+                              Center(child: const Text('Confirm')),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
               );
               setState(() {
@@ -506,23 +708,78 @@ class _Small_SeatsState extends State<Small_Seats> {
                 _color = Colors.green;
               });
               showDialog<String>(context: context, builder: (BuildContextcontext) =>
-                  AlertDialog(
-                    title:
-                    const Text(
-                        'ERROR'),
-                    content: const Text("Hi"),
-                    actions: <
-                        Widget>[
-                      TextButton(
-                        onPressed: () =>
-                            Navigator.pop(
-                                context,
-                                'OK'),
-                        child:
-                        const Text(
-                            'OK'),
+                  Container(
+                    height: 200,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color.fromRGBO(116, 157, 181, 1),
+                    ),
+                    child: AlertDialog(
+                      title:
+                      Center(child: const Text('Booking confirmation')),
+                      content: Container(
+                        height: 100,
+                        width: 100,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text("Movie Name:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("Yazan Sharawi"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Seat number:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("4C"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text("Date:"),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text("17/07/2028"),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+
+                          ],
+                        ),
                       ),
-                    ],
+                      actions: <
+                          Widget>[
+                        Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.white,
+                            ),
+                            child: TextButton(
+                              onPressed: () => Navigator.pop(context, 'Confirm'),
+                              child:
+                              Center(child: const Text('Confirm')),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   );
             },

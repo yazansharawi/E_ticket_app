@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:movie_app/Main/Screens/HomePage.dart';
+import 'package:movie_app/Main/Screens/SignIn.dart';
 import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignUp.dart';
@@ -76,10 +77,12 @@ class _settingsState extends State<settings> {
                           height: 150,
                           width: 130,
                           decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("lib/Main/Img/man1.jpeg"),
+                              fit: BoxFit.fill,
+                            ),
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.yellow,
                           ),
-                          child: Center(child: Text("Image")),
                         ),
                         SizedBox(
                           width: 5,
@@ -215,14 +218,22 @@ class _settingsState extends State<settings> {
                   ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                    child: Container(
-                      width: 300,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.red
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => signin()),
+                        );
+                      },
+                      child: Container(
+                        width: 300,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.red
+                        ),
+                        child: Center(child: Text("Sign out")),
                       ),
-                      child: Center(child: Text("Sign out")),
                     ),
                   ),
                 ],

@@ -38,7 +38,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_rating_bar: ^4.0.1
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -92,6 +92,11 @@ flutter:
      - lib/Main/Img/movie28.jpeg
      - lib/Main/Img/movie29.jpeg
      - lib/Main/Img/movie30.jpeg
+     - lib/Main/Img/man1.jpeg
+     - lib/Main/Img/man2.jpeg
+     - lib/Main/Img/man3.jpeg
+     - lib/Main/Img/man4.jpeg
+     - lib/Main/Img/women1.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

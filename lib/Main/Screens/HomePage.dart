@@ -56,7 +56,7 @@ class _homepageState extends State<homepage> {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 15, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(10, 5, 0, 0),
                       child: SizedBox(
                         height: 20,
                         width: 20,
@@ -73,7 +73,7 @@ class _homepageState extends State<homepage> {
                       width: 270,
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(15, 5, 0, 0),
                       child: SizedBox(
                         height: 20,
                         width: 20,
@@ -90,7 +90,7 @@ class _homepageState extends State<homepage> {
                       width: 30,
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 35, 0, 0),
                       child: SizedBox(
                           height: 30,
                           width: 30,
