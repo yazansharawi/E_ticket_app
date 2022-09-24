@@ -6,6 +6,7 @@ import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignUp.dart';
 
+import 'BookingPage.dart';
 import 'FavoritesPage.dart';
 
 class settings extends StatefulWidget {
@@ -235,22 +236,25 @@ class _settingsState extends State<settings> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
-                backgroundColor: Color.fromRGBO(116, 157, 181, 1.0),
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.favorite),
                 label: 'Favorites',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_today),
                 label: 'Calendar',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: 'Settings',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
             ],
-            currentIndex: _selectedIndex,
+            currentIndex: 3,
             selectedItemColor: Colors.black,
             onTap: (value) {
               if (value == 0)
@@ -266,7 +270,7 @@ class _settingsState extends State<settings> {
               if (value == 2)
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => signup()),
+                  MaterialPageRoute(builder: (context) => Book()),
                 );
               if (value == 3)
                 Navigator.push(

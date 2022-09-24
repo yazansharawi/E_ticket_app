@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/Main/Screens/HomePage.dart';
+import 'package:movie_app/Main/Screens/SignIn.dart';
 import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignUp.dart';
@@ -12,9 +13,14 @@ class Book extends StatefulWidget {
   _BookState createState() => _BookState();
 }
 
-
+@override
+late Color _color = Colors.green;
+void initState() {
+  Color _color = Colors.green;
+}
 class _BookState extends State<Book> {
-  int _selectedIndex = 0;
+
+  int _selectedIndex = 2;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -40,6 +46,8 @@ class _BookState extends State<Book> {
     setState(() {
       _selectedIndex = index;
     });
+
+
   }
   @override
   Widget build(BuildContext context) {
@@ -47,14 +55,13 @@ class _BookState extends State<Book> {
     return SafeArea(
       child:Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Center(
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 35, 0),
-                child: Text(
+              child: Text(
                   "Booking",
                   style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
-              )),
+              ),
           backgroundColor: Color.fromRGBO(116, 157, 181, 1.0),
         ),
         body: Column(
@@ -169,7 +176,7 @@ class _BookState extends State<Book> {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 20,
             ),
             Small_Seats(),
             SizedBox(
@@ -193,7 +200,7 @@ class _BookState extends State<Book> {
             ),
             Small_Seats(),
             SizedBox(
-              height: 15,
+              height: 20,
             ),
             Big_seats(),
             SizedBox(
@@ -205,7 +212,7 @@ class _BookState extends State<Book> {
             ),
             Big_seats(),
             SizedBox(
-              height: 15,
+              height: 40,
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -233,17 +240,20 @@ class _BookState extends State<Book> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.favorite),
                 label: 'Favorites',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_today),
                 label: 'Calendar',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: 'Settings',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
             ],
-            currentIndex: _selectedIndex,
+            currentIndex: 2,
             selectedItemColor: Colors.black,
             onTap: (value) {
               if (value == 0)
@@ -259,7 +269,7 @@ class _BookState extends State<Book> {
               if (value == 2)
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => signup()),
+                  MaterialPageRoute(builder: (context) => Book()),
                 );
               if (value == 3)
                 Navigator.push(
@@ -273,21 +283,97 @@ class _BookState extends State<Book> {
 
 }
 
-class Big_seats extends StatelessWidget {
-  const Big_seats({
-    Key? key,
-  }) : super(key: key);
-
+class Big_seats extends StatefulWidget {
+  @override
+  _Big_seatsState createState() => _Big_seatsState();
+}
+class _Big_seatsState extends State<Big_seats> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.fromLTRB(90, 0, 50, 0),
       child: Row(
         children: [
-          Container(
-            width: 50,
-            height: 20,
-            color: Colors.red,
+          GestureDetector(
+            onTap: (){
+              showDialog<String>(context: context, builder: (BuildContextcontext) =>
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color.fromRGBO(116, 157, 181, 1),
+                    ),
+                    child: AlertDialog(
+                      title:
+                      Center(child: const Text('Booking confirmation')),
+                      content: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text("Movie Name:"),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Yazan Sharawi"),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Text("Seat number:"),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("4C"),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Text("Date:"),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("17/07/2028"),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+
+                        ],
+                      ),
+                      actions: <
+                          Widget>[
+                        Center(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.white,
+                            ),
+                            child: TextButton(
+                              onPressed: () => Navigator.pop(context, 'Confirm'),
+                              child:
+                              Center(child: const Text('Confirm')),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+              );
+              setState(() {
+                _color = Colors.red;
+              });
+            },
+            child: Container(
+              width: 50,
+              height: 20,
+              color: _color,
+            ),
           ),
           SizedBox(
             width: 10,
@@ -300,10 +386,37 @@ class Big_seats extends StatelessWidget {
           SizedBox(
             width: 10,
           ),
-          Container(
-            width: 50,
-            height: 20,
-            color: Colors.red,
+          GestureDetector(
+            onTap: (){
+              showDialog<String>(context: context, builder: (BuildContextcontext) =>
+                  AlertDialog(
+                    title:
+                    const Text(
+                        'ERROR'),
+                    content: const Text("Hi"),
+                    actions: <
+                        Widget>[
+                      TextButton(
+                        onPressed: () =>
+                            Navigator.pop(
+                                context,
+                                'OK'),
+                        child:
+                        const Text(
+                            'OK'),
+                      ),
+                    ],
+                  ),
+              );
+              setState(() {
+                _color = Colors.red;
+              });
+            },
+            child: Container(
+              width: 50,
+              height: 20,
+              color: Colors.green,
+            ),
           ),
           SizedBox(
             width: 10,
@@ -311,7 +424,7 @@ class Big_seats extends StatelessWidget {
           Container(
             width: 50,
             height: 20,
-            color: Colors.red,
+            color: Colors.green,
           ),
           SizedBox(
             width: 10,
@@ -321,13 +434,15 @@ class Big_seats extends StatelessWidget {
       ),
     );
   }
+
 }
 
-class Small_Seats extends StatelessWidget {
-  const Small_Seats({
-    Key? key,
-  }) : super(key: key);
 
+class Small_Seats extends StatefulWidget {
+  @override
+  _Small_SeatsState createState() => _Small_SeatsState();
+}
+class _Small_SeatsState extends State<Small_Seats> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -342,10 +457,80 @@ class Small_Seats extends StatelessWidget {
           SizedBox(
             width: 10,
           ),
+          GestureDetector(
+
+            onTap: (){
+              showDialog<String>(context: context, builder: (BuildContextcontext) =>
+                  AlertDialog(
+                    title:
+                    const Text('ERROR'),
+                    content: const Text("Hi"),
+                    actions: <
+                        Widget>[
+                      TextButton(
+                        onPressed: () =>
+                            Navigator.pop(
+                                context,
+                                'OK'),
+                        child:
+                        const Text(
+                            'OK'),
+                      ),
+                    ],
+                  ),
+              );
+              setState(() {
+                _color = Colors.green;
+              });
+            },
+            child: Container(
+              width: 20,
+              height: 20,
+              color: Colors.red,
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
           Container(
             width: 20,
             height: 20,
             color: Colors.red,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          GestureDetector(
+            onTap: (){
+              setState(() {
+                _color = Colors.green;
+              });
+              showDialog<String>(context: context, builder: (BuildContextcontext) =>
+                  AlertDialog(
+                    title:
+                    const Text(
+                        'ERROR'),
+                    content: const Text("Hi"),
+                    actions: <
+                        Widget>[
+                      TextButton(
+                        onPressed: () =>
+                            Navigator.pop(
+                                context,
+                                'OK'),
+                        child:
+                        const Text(
+                            'OK'),
+                      ),
+                    ],
+                  ),
+                  );
+            },
+            child: Container(
+              width: 20,
+              height: 20,
+              color: _color,
+            ),
           ),
           SizedBox(
             width: 10,
@@ -361,7 +546,7 @@ class Small_Seats extends StatelessWidget {
           Container(
             width: 20,
             height: 20,
-            color: Colors.red,
+            color: _color,
           ),
           SizedBox(
             width: 10,
@@ -369,23 +554,7 @@ class Small_Seats extends StatelessWidget {
           Container(
             width: 20,
             height: 20,
-            color: Colors.red,
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-            width: 20,
-            height: 20,
-            color: Colors.red,
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Container(
-            width: 20,
-            height: 20,
-            color: Colors.red,
+            color: _color
           ),
           SizedBox(
             width: 10,
@@ -395,4 +564,8 @@ class Small_Seats extends StatelessWidget {
     );
   }
 }
+
+
+
+
 

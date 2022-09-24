@@ -60,6 +60,38 @@ flutter:
   assets:
      - lib/Main/Img/jj_flag.png
      - lib/Main/Img/popcorn.jpeg
+     - lib/Main/Img/download (4).jpeg
+     - lib/Main/Img/download (5).jpeg
+     - lib/Main/Img/movie1.jpeg
+     - lib/Main/Img/movie2.jpeg
+     - lib/Main/Img/movie3.jpeg
+     - lib/Main/Img/movie4.jpeg
+     - lib/Main/Img/movie5.jpeg
+     - lib/Main/Img/movie6.jpeg
+     - lib/Main/Img/movie7.jpeg
+     - lib/Main/Img/movie8.jpeg
+     - lib/Main/Img/movie9.jpeg
+     - lib/Main/Img/movie10.jpeg
+     - lib/Main/Img/movie11.jpeg
+     - lib/Main/Img/movie12.jpeg
+     - lib/Main/Img/movie13.jpeg
+     - lib/Main/Img/movie14.jpeg
+     - lib/Main/Img/movie15.jpeg
+     - lib/Main/Img/movie16.jpeg
+     - lib/Main/Img/movie17.jpeg
+     - lib/Main/Img/movie18.jpeg
+     - lib/Main/Img/movie19.jpeg
+     - lib/Main/Img/movie20.jpeg
+     - lib/Main/Img/movie21.jpeg
+     - lib/Main/Img/movie22.jpeg
+     - lib/Main/Img/movie23.jpeg
+     - lib/Main/Img/movie24.jpeg
+     - lib/Main/Img/movie25.jpeg
+     - lib/Main/Img/movie26.jpeg
+     - lib/Main/Img/movie27.jpeg
+     - lib/Main/Img/movie28.jpeg
+     - lib/Main/Img/movie29.jpeg
+     - lib/Main/Img/movie30.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

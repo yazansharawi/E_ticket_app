@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:movie_app/Main/Screens/BookingPage.dart';
 import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignUp.dart';
@@ -176,13 +177,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie1.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -194,13 +189,18 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.black,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie2.jpeg"),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => movinfo()),
+                        );
+                      },child: MovieCont("lib/Main/Img/movie3.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -212,13 +212,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.blueGrey,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie4.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -230,31 +224,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.yellow,
-                        ),
-                        width: 160.0,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => movinfo()),
-                        );
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.green,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie5.jpeg"),
                     ),
                   ],
                 ),
@@ -294,13 +264,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie6.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -312,13 +276,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie7.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -330,13 +288,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie8.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -348,13 +300,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie9.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -366,13 +312,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie10.jpeg"),
                     ),
                   ],
                 ),
@@ -412,13 +352,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie11.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -430,13 +364,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie12.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -448,13 +376,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie13.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -466,13 +388,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie14.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
@@ -484,13 +400,7 @@ class _homepageState extends State<homepage> {
                           MaterialPageRoute(builder: (context) => movinfo()),
                         );
                       },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.red,
-                        ),
-                        width: 160.0,
-                      ),
+                      child: MovieCont("lib/Main/Img/movie15.jpeg"),
                     ),
                   ],
                 ),
@@ -519,7 +429,7 @@ class _homepageState extends State<homepage> {
                 label: 'Settings',
               ),
             ],
-            currentIndex: _selectedIndex,
+            currentIndex: 0,
             selectedItemColor: Colors.black,
             onTap: (value) {
               if (value == 0)
@@ -535,7 +445,7 @@ class _homepageState extends State<homepage> {
               if (value == 2)
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => signup()),
+                  MaterialPageRoute(builder: (context) => Book()),
                 );
               if (value == 3)
                 Navigator.push(
@@ -544,6 +454,19 @@ class _homepageState extends State<homepage> {
                 );
             }),
       ),
+    );
+  }
+
+  Container MovieCont(String i) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        image: DecorationImage(
+          image: AssetImage(i),
+          fit: BoxFit.fill,
+        ),
+      ),
+      width: 160.0,
     );
   }
 }

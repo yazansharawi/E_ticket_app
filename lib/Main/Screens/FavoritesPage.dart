@@ -5,6 +5,7 @@ import 'dart:io' show Platform;
 
 import 'package:movie_app/Main/Screens/SignUp.dart';
 
+import 'BookingPage.dart';
 import 'SettingsPage.dart';
 
 class fav extends StatefulWidget {
@@ -109,52 +110,32 @@ class _favState extends State<fav> {
                   // This next line does the trick.
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.red,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie16.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie17.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.green,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie18.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.yellow,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie19.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.orange,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie20.jpeg"),
                     ),
                   ],
                 ),
@@ -187,52 +168,32 @@ class _favState extends State<fav> {
                   // This next line does the trick.
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.red,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie21.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie21.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.green,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie23.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.yellow,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie24.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.orange,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie25.jpeg"),
                     ),
                   ],
                 ),
@@ -265,52 +226,32 @@ class _favState extends State<fav> {
                   // This next line does the trick.
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.red,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie26.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie27.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.green,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie28.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.yellow,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie29.jpeg"),
                     ),
                     SizedBox(
                       width: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.orange,
-                      ),
-                      width: 160.0,
+                    GestureDetector(
+                      child: MovieCont("lib/Main/Img/movie30.jpeg"),
                     ),
                   ],
                 ),
@@ -324,22 +265,25 @@ class _favState extends State<fav> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
-                backgroundColor: Color.fromRGBO(116, 157, 181, 1.0),
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.favorite),
                 label: 'Favorites',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_today),
                 label: 'Calendar',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: 'Settings',
+                backgroundColor: Color.fromRGBO(116, 157, 181, 1),
               ),
             ],
-            currentIndex: _selectedIndex,
+            currentIndex: 1,
             selectedItemColor: Colors.black,
             onTap: (value) {
               if (value == 0)
@@ -355,7 +299,7 @@ class _favState extends State<fav> {
               if (value == 2)
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => signup()),
+                  MaterialPageRoute(builder: (context) => Book()),
                 );
               if (value == 3)
                 Navigator.push(
@@ -426,5 +370,18 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
       ),
     );
   }
+
+}
+Container MovieCont(String i) {
+  return Container(
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      image: DecorationImage(
+        image: AssetImage(i),
+        fit: BoxFit.fill,
+      ),
+    ),
+    width: 160.0,
+  );
 }
 
